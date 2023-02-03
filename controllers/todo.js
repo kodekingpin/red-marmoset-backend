@@ -24,7 +24,7 @@ exports.createTodo = (req, res, next) => {
         });
 };
 
-const Todo = require("../models/todo");
+
 
 exports.getTodos = (req, res, next) => {
     const pageSize = +req.query.pagesize;
@@ -53,7 +53,7 @@ exports.getTodos = (req, res, next) => {
         });
 };
 
-const Todo = require("../models/todo");
+
 
 exports.getTodoById = (req, res, next) => {
     Todo.findById(req.params.id)
@@ -71,7 +71,7 @@ exports.getTodoById = (req, res, next) => {
         });
 };
 
-const Todo = require("../models/todo");
+
 
 exports.updateTodo = (req, res, next) => {
     const todo = new Todo({
@@ -92,7 +92,7 @@ exports.updateTodo = (req, res, next) => {
         });
 };
 
-const Todo = require("../models/todo");
+
 
 exports.deleteTodo = (req, res, next) => {
     Todo.deleteOne({ _id: req.params.id })
